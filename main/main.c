@@ -3,6 +3,8 @@
 #include "esp_err.h"
 #include "esp_log.h"
 #include "lvgl/lvgl.h"
+#include "esp_lcd_panel_commands.h"
+#include "ili9486_drv.h"
 
 
 #define TFT_HORIZONTAL_RESOLUTION 480
@@ -41,8 +43,6 @@ void app_main()
         display_driver.flush_cb = tft_display_driver_flush_callback;
         display_driver.draw_buf = &display_draw_buffer;
         display_driver.user_data = NULL;
-
-
     }
 
 
